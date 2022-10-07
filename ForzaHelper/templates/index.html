@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Forza Helper
+{% endblock %}
+
+{% block body%}
+<div class="containter-fluid">
+    <div class="container-fluid  fst-slide mh-100">
+        <div class="row">
+            <div class="col-8 greeting-heading d-flex justify-content-center align-items-center">
+                <h1 class="text-light greeting-text text-center fw-bold">Твой лучший помощник<br>в Forza Horizon 5</h1>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-end align-items-center">
+            <div class="col-8 d-flex flex-column align-items-center justify-content-center play-now-heading">
+                <h1 class="text-light text-play-now text-center">Играй удобнее</h1>
+
+                <a class="btn btn-right-now btn-light" href="#find-settings" role="button">
+                    <div class="btn-container d-flex justify-content-center">
+                        <div class="btn-text fw-lighter">Прямо сейчас</div>
+                        <div class="btn-icon ps-3 d-flex justify-content-center align-items-center"><i class="fa-sharp fa-solid fa-chevron-down down-icon ico"></i></div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid statistics-slide">
+        <div class="row d-flex align-items-baseline">
+            <div class="col-3 text-center ">
+                <h1 class="stat-numb">150</h1>
+                <p class="stat-text mt-3">Авторов выкладывают дизайны 
+                    каждую неделю</p>
+            </div>
+            <div class="col-3 text-center ">
+                <h1 class="stat-numb">1500</h1>
+                <p class="stat-text mt-3">Проверенных настроек на любую тачку 
+                    для любой езды</p>
+            </div>
+            <div class="col-3 text-center ">
+                <h1 class="stat-numb">690</h1>
+                <p class="stat-text mt-3 text-wrap">Уникальных дизайнов, собранных отовсюду</p>
+            </div> 
+            <div class="col-3 "><img class="static-slide-img" src="../static/img/tesla.png" alt=""></div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid third-slide">
+        <div class="col-12 pt-3 d-flex justify-content-center">
+            <h1 class="th-slide-heading text-center" id="find-settings">Не можешь найти настройку?</h1>
+        </div>
+        <div class="col-12 pt-3 ps-5 d-flex justify-content-between align-items-end th-slide-h">
+            <p class="text"><small>Для<br>дрифта<br>спринта<br>или ралли</small></p>
+            <div class="d-flex justify-content-end pe-5">
+
+                <a class="btn th-slide-btn w-100 d-flex btn-light"  href="/settings" role="button">
+                    <div class="btn-text fw-lighter ps-3">Мы найдем её за тебя</div>
+                    <div class="btn-icon px-3 pt-2"><i class="fa-solid fa-chevron-right"></i></div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="container-fluid fourth-slide">
+        <div class="col-12 d-flex justify-content-center">
+            <h1 class="text-center fourth-slide-text-1">Найди</h1>
+        </div>
+        <div class="col-12 d-flex justify-content-center">
+            <h3 class="text-center fourth-slide-text-2">идеал</h3>
+        </div>
+        <div class="col-12 d-flex justify-content-center">
+            <h5 class="text-center fourth-slide-text-3">дизайна</h5>
+        </div>
+        <div class="col-12 d-flex justify-content-center">
+            <a href="/designs"><img class="fourth-slide-skyline" src="../static/img/skyline.png" alt=""></a>
+        </div>
+    </div>
+</div>
+
+    
+</div>
+{% endblock %}

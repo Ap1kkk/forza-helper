@@ -1,0 +1,19 @@
+.log-in-form-container {
+    height: 100vh;
+}
+
+.log-in-form {
+    width: 50vh;
+}
+.user-pic-container {
+    background-color: #cccccc;
+    width: 30vh;
+    height: 30vh;
+    border-radius: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user-pic {
+    font-size: 20vh;
+}

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/add-car-setting.css')}}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand fw-bold fs-2 ms-3" href="/">Forza Helper</a>
+          <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button> -->
+          <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item me-2">
+                <a class="nav-link fs-4" href="/car-park">Автопарк</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link fs-4" href="/settings">Настройки</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link fs-4" href="/designs">Дизайны</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link fs-4" href="/add-car-setting">Добавить</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ms-0 me-3 mb-2 mb-lg-0">
+                <li class="nav-item d-flex">
+                    <a class="nav-link fs-5" href="/profile">
+                      {% if current_user.is_authenticated %}
+                      <span>{{ current_user.login }}</span>
+                      {% else %}
+                      <span>Профиль</span>
+                      {% endif %}
+                      <i class="fa-solid fa-user ms-2"></i>
+                    </a>
+                </li>
+
+                {% if current_user.is_authenticated %}
+                <li class="nav-item d-flex">
+                  <a class="nav-link fs-5 mx-2 btn btn-outline-danger" href="/logout">Log out</a>
+                </li>
+                {% else %}
+                <li class="nav-item d-flex">
+                  <a class="nav-link fs-5 mx-2 btn btn-outline-success" href="/login">Log in</a>
+                </li>
+                <li class="nav-item d-flex">
+                  <a class="nav-link fs-5 mx-2 btn btn-outline-light" href="/register">Register</a>
+                </li>
+                {% endif %}
+
+            </ul>
+          <!-- </div> -->
+        </div>
+    </nav>
+    
+    <footer id="footer">
+        
+    </footer>
+
+    {% block body%}{% endblock %}
+    <script src="https://kit.fontawesome.com/9061d80359.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    
+</body>
+</html> 

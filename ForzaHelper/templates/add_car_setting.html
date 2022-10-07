@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Add setting
+{% endblock %}
+
+{% block body%}
+<div class="container w-70">
+    
+    <div class="add-setting-form p-5">
+        <h1>Добавление настройки</h1>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+               {% for message in messages %}
+               <div class="alert alert-warning mt-1">{{ message }}</div>
+               {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <form method="POST">
+            <div class="mb-3">
+                <label for="setting-name" class="form-label">Name of your setting</label>
+                <input type="text" class="form-control" id="setting-name" name="setting-name">
+            </div>
+            <div class="row">
+                <div class="mb-3 w-25">
+                    <label for="car-class" class="form-label">Car class</label>
+                    <!-- <input type="text" class="form-control" id="car-class" name="car-class"> -->
+                    <select class="form-select" id="car-class" name="car-class">
+                        <option selected>Class</option>
+                        <option value="x">X</option>
+                        <option value="s1">S1</option>
+                        <option value="s2">S2</option>
+                        <option value="a">A</option>
+                        <option value="b">B</option>
+                        <option value="c">C</option>
+                        <option value="d">D</option>+
+                    </select>
+                </div>  
+                <div class="mb-3 w-25">
+                    <label for="car-brand" class="form-label">Полное название бренда</label>
+                    <!-- <input type="text" class="form-control" id="car-brand" name="car-brand"> -->
+                    <input class="w-100 form-control" type="text" name="car-brand" id="car-brand" list="brands" placeholder="Brand">
+                    <datalist class="filters-option" id="brands">
+                        {% for brand in brand_values %}
+                            <option class="filters-option" value="{{brand.lower()}}"></option>
+                        {% endfor %}
+                    </datalist>
+                </div>
+                <div class="mb-3 w-25">
+                    <label for="car-model" class="form-label">Model</label>
+                    <!-- <input type="text" class="form-control" id="car-model" name="car-model"> -->
+                    <input class="w-100 form-control" type="text" name="car-model" id="car-model" list="models" placeholder="Model">
+                    <datalist class="filters-option" id="models">
+                        {% for model in model_values %}
+                            <option class="filters-option" value="{{model.lower()}}"></option>
+                        {% endfor %}
+                    </datalist>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="setting-id" class="form-label">Setting id</label>
+                <input type="text" class="form-control" id="setting-id" name="setting-id">
+            </div>
+            <div class="mb-3">
+                <label for="setting-description" class="form-label">Setting description</label>
+                <input type="text" class="form-control" id="setting-description" name="setting-description">
+            </div>
+            <!-- <a class="btn btn-primary" href="{{ url_for('register') }}">Register</a> -->
+            <input type="submit" class="btn btn-outline-success " value="Apply">
+        </form>
+    </div>
+</div>
+<script type="module" src="{{ url_for('static', filename='js/add-car-setting.js') }}"></script>   
+{% endblock %}

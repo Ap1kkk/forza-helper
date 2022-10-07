@@ -1,0 +1,38 @@
+{% extends 'base.html' %} 
+{% block body%}
+<h2 style="margin-top: 10vh">Все настройки</h2>
+
+
+  <div class="table-responsive">
+    <table class="table table-warning table-hover table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Brand</th>
+          <th scope="col">Model</th>
+          <th scope="col">Car class</th>
+          <th scope="col">Setting id</th>
+          <th scope="col">Setting name</th>
+          <th scope="col">Setting description</th>
+          <th scope="col">Added by user id</th>
+          <th scope="col">Car filename</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for el in settings %}
+        <tr class="">
+          <td>{{ el.id }}</td>
+          <td>{{ el.brand }}</td>
+          <td>{{ el.model }}</td>
+          <td>{{ el.car_class }}</td>
+          <td>{{ el.setting_id }}</td>
+          <td>{{ el.setting_name }}</td>
+          <td>{{ el.setting_description }}</td>
+          <td>{{ el.added_by }}</td>
+          <td>{{ el.car_name }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

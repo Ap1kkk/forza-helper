@@ -1,0 +1,200 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Forza Helper
+{% endblock %}
+
+{% block body%}
+
+<div class="container-fluid settings-main">
+    <div class="container settings-pole">
+
+        <div class="col-12 filters-block">
+            <div class="row filters d-flex align-items-center justify-content-between">
+                
+                    <div class="col-3 mx-auto d-flex flex-column align-items-center justify-content-center filter-item">
+                        <!-- <span class="text px-3">TESLA</span>
+                        <i class="fa-solid fa-chevron-down icon"></i> -->
+                        <input class="filters-input w-100" type="text" name="" id="" list="brand" placeholder="Brand">
+                        <datalist class="filters-option" id="brand">
+                            <option class="filters-option" value="tesla"></option>
+                            <option class="filters-option" value="mclaren"></option>
+                            <option class="filters-option" value="audi"></option>
+                        </datalist>
+                    </div>
+                    <div class="col-3 mx-auto d-flex flex-column align-items-center justify-content-center filter-item">
+                        <!-- <span class="text px-3">MODEL S</span>
+                        <i class="fa-solid fa-chevron-down icon"></i> -->
+                        <input class="filters-input w-100" type="text" name="" id="" list="brand" placeholder="Model">
+                        <datalist class="filters-option" id="brand">
+                            <option class="filters-option" value="tesla"></option>
+                            <option class="filters-option" value="mclaren"></option>
+                            <option class="filters-option" value="audi"></option>
+                        </datalist>
+                    </div>
+
+                    <div class="col-3 mx-auto d-flex flex-column align-items-center justify-content-center filter-item">
+                        <!-- <span class="text px-3">DRIFT</span>
+                        <i class="fa-solid fa-chevron-down icon"></i> -->
+                        <input class="filters-input w-100" type="text" name="" id="" list="brand" placeholder="Author">
+                        <datalist class="filters-option" id="brand">
+                            <option class="filters-option" value="tesla"></option>
+                            <option class="filters-option" value="mclaren"></option>
+                            <option class="filters-option" value="audi"></option>
+                        </datalist>
+                    </div>
+                    <div class="col-2 mx-auto d-flex flex-column align-items-center justify-content-center filter-item">
+                        <!-- <span class="text px-3">T</span>
+                        <i class="fa-solid fa-chevron-down icon"></i> -->
+                        <select class="form-select sorted-by-selector">
+                            <option selected>Сортировать по</option>
+                            <option value="X">Наиболее популярное</option>
+                            <option value="S1">Возрастанию класса</option>
+                            <option value="S2">Убыванию класса</option>
+                            <option value="A">Наименее популярное</option>
+                          </select>
+                    </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="cards-block mt-4 mx-auto">
+                <div class="card design-car-card">
+                    <div class="card-title d-flex justify-content-around mt-2">
+                        <h5 class="car-class d-flex align-items-center justify-content-center">S1</h5>
+                        <h5 class="car-name d-flex align-items-center justify-content-center">SUPRA A90</h5>
+                    </div>
+                    <img src="../static/img/tesla.png" class="car-img position-absolute" alt="...">
+                    <div class="card-body">
+                        <p class="card-text design-name">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-car-info position-absolute bottom-0 end-0" type="button">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="cards-block mt-4 mx-auto">
+                <div class="card design-car-card">
+                    <div class="card-title d-flex justify-content-around mt-2">
+                        <h5 class="car-class d-flex align-items-center justify-content-center">S1</h5>
+                        <h5 class="car-name d-flex align-items-center justify-content-center">SUPRA A90</h5>
+                    </div>
+                    <img src="../static/img/tesla.png" class="car-img position-absolute" alt="...">
+                    <div class="card-body">
+                        <p class="card-text design-name">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-car-info position-absolute bottom-0 end-0" type="button">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="cards-block mt-4 mx-auto">
+                <div class="card design-car-card">
+                    <div class="card-title d-flex justify-content-around mt-2">
+                        <h5 class="car-class d-flex align-items-center justify-content-center">S1</h5>
+                        <h5 class="car-name d-flex align-items-center justify-content-center">SUPRA A90</h5>
+                    </div>
+                    <img src="../static/img/tesla.png" class="car-img position-absolute" alt="...">
+                    <div class="card-body">
+                        <p class="card-text design-name">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-car-info position-absolute bottom-0 end-0" type="button">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="cards-block mt-4 mx-auto">
+                <div class="card design-car-card">
+                    <div class="card-title d-flex justify-content-around mt-2">
+                        <h5 class="car-class d-flex align-items-center justify-content-center">S1</h5>
+                        <h5 class="car-name d-flex align-items-center justify-content-center">SUPRA A90</h5>
+                    </div>
+                    <img src="../static/img/tesla.png" class="car-img position-absolute" alt="...">
+                    <div class="card-body">
+                        <p class="card-text design-name">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-car-info position-absolute bottom-0 end-0" type="button">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="cards-block mt-4 mx-auto">
+                <div class="card design-car-card">
+                    <div class="card-title d-flex justify-content-around mt-2">
+                        <h5 class="car-class d-flex align-items-center justify-content-center">S1</h5>
+                        <h5 class="car-name d-flex align-items-center justify-content-center">SUPRA A90</h5>
+                    </div>
+                    <img src="../static/img/tesla.png" class="car-img position-absolute" alt="...">
+                    <div class="card-body">
+                        <p class="card-text design-name">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-car-info position-absolute bottom-0 end-0" type="button">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="cards-block mt-4 mx-auto">
+                <div class="card design-car-card">
+                    <div class="card-title d-flex justify-content-around mt-2">
+                        <h5 class="car-class d-flex align-items-center justify-content-center">S1</h5>
+                        <h5 class="car-name d-flex align-items-center justify-content-center">SUPRA A90</h5>
+                    </div>
+                    <img src="../static/img/tesla.png" class="car-img position-absolute" alt="...">
+                    <div class="card-body">
+                        <p class="card-text design-name">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-car-info position-absolute bottom-0 end-0" type="button">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="cards-block mt-4 mx-auto">
+                <div class="card design-car-card">
+                    <div class="card-title d-flex justify-content-around mt-2">
+                        <h5 class="car-class d-flex align-items-center justify-content-center">S1</h5>
+                        <h5 class="car-name d-flex align-items-center justify-content-center">SUPRA A90</h5>
+                    </div>
+                    <img src="../static/img/tesla.png" class="car-img position-absolute" alt="...">
+                    <div class="card-body">
+                        <p class="card-text design-name">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-car-info position-absolute bottom-0 end-0" type="button">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="cards-block mt-4 mx-auto">
+                <div class="card design-car-card">
+                    <div class="card-title d-flex justify-content-around mt-2">
+                        <h5 class="car-class d-flex align-items-center justify-content-center">S1</h5>
+                        <h5 class="car-name d-flex align-items-center justify-content-center">SUPRA A90</h5>
+                    </div>
+                    <img src="../static/img/tesla.png" class="car-img position-absolute" alt="...">
+                    <div class="card-body">
+                        <p class="card-text design-name">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-car-info position-absolute bottom-0 end-0" type="button">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

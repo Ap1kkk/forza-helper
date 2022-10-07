@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+body {
+    margin-top: 7vh;
+}
+
+.dd-none {
+    display: none;
+}
+
+.ddd-none {
+    display: none;
+}
+/* header */
+
+nav {
+    font-family: 'Montserrat', serif;
+}
+.navbar-nav .dropdown-menu{
+    right: 0;
+    left: auto;
+}
+
+/* header */
+
+
+/* 1st landing slide */
+.fst-slide {
+    background-image: url(../img/1st-slide.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    /* font-family: 'Merriweather', serif; */
+    font-family: 'Montserrat', serif;
+
+}
+.greeting-container {
+    height: 50vh !important;
+}
+.greeting-heading {
+    min-height: 25vh;
+    height: 50vh;
+    
+    font-weight: 900 !important;
+}
+.greeting-text{
+    font-size: 8vh;
+    /* font-size: 70px; */
+    text-shadow:1px 2px 4px rgba(255,255,255,0.8);
+    -webkit-text-shadow:1px 2px 4px rgba(255,255,255,0.8);
+    -moz-text-shadow:1px 2px 4px rgba(255,255,255,0.8);
+}
+.play-now-heading {
+    height: 49vh;
+    
+}
+.text-play-now {
+    font-size: 9vh;
+    
+}
+.btn-right-now {
+    font-family: 'Raleway', sans-serif;
+    
+    font-size: 6vh;
+    /* font-size: 3rem; */
+    color: #fff;
+    background: #818181;
+    background: linear-gradient(to bottom, #8181812c 0%, #000000 100%);
+    background: -webkit-linear-gradient(to bottom, #8181812c 0%, #000000 100%);
+    background: -moz-linear-gradient(to bottom, #8181812c 0%, #000000 100%);
+    width: 55%;
+    border-radius: 50px;
+    border: 2px solid #fff;
+
+    transition: 0.4s;
+}
+.btn-right-now:hover {
+    /* background: #818181; */
+    color: #fff !important;
+    background: linear-gradient(to bottom, #1b1b1b83 0%, #000000 100%) !important;
+    background: -webkit-linear-gradient(to bottom, #1b1b1b83 0%, #000000 100%);
+    background: -moz-linear-gradient(to bottom, #1b1b1b83 0%, #000000 100%);
+    border: 2px solid #fff;
+}
+
+.btn-icon .down-icon{
+    /* font-size: 50px; */
+    font-size: 6vh;
+    
+}
+.btn-icon .ico{
+    font-size: 40px;
+}
+
+/* 1st landing slide */
+
+
+/* statistics section */
+.statistics-slide{
+    height: 50vh;
+    background: #000000;
+    background: -webkit-linear-gradient(to bottom, #000000 0%, #4a4a4a 65%, #000000 100%);
+    background: -moz-linear-gradient(to bottom, #000000 0%, #4a4a4a 65%, #000000 100%);
+    background: linear-gradient(to bottom, #000000 0%, #4a4a4a 65%, #000000 100%);
+    color: #fff;
+}
+
+.stat-numb {
+    /* font-size: 110px; */
+    font-size: 13vh;
+}
+.stat-text {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    /* font-size: 32px; */
+    font-size: 3vh;
+
+}
+
+.static-slide-img {
+    padding-top: 14vh;
+}
+/* statistics section */
+
+
+/* 3rd landing slide */
+.third-slide {
+    color: #fff;
+    height: 100vh;
+    background-image: url(../img/3rd-slide.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.th-slide-heading {
+    /* font-size: 100px; */
+    font-size: 11vh;
+    color: #fff;
+}
+.th-slide-h{
+    height: 75vh;
+}
+.th-slide-h .text{
+    font-family: 'Raleway', sans-serif;
+    /* font-size: 70px; */
+    font-size: 9vh;
+}
+
+.th-slide-btn {
+    font-family: 'Raleway', sans-serif;
+    /* font-size: 50px; */
+    font-size: 6vh;
+
+    color: #fff;
+    background: #818181;
+    background: linear-gradient(to bottom, #8181812c 0%, #000000 100%);
+    background: -webkit-linear-gradient(to bottom, #8181812c 0%, #000000 100%);
+    background: -moz-linear-gradient(to bottom, #8181812c 0%, #000000 100%);
+    width: 55%;
+    border-radius: 50px;
+    border: 2px solid #fff;
+}
+.th-slide-btn:hover {
+    color: #fff !important;
+    background: linear-gradient(to bottom, #1b1b1b83 0%, #000000 100%) !important;
+    background: -webkit-linear-gradient(to bottom, #1b1b1b83 0%, #000000 100%);
+    background: -moz-linear-gradient(to bottom, #1b1b1b83 0%, #000000 100%);
+    border: 2px solid #fff;
+
+}
+.btn-icon {
+    /* font-size: 45px; */
+    font-size: 5vh;
+
+}
+/* 3rd landing slide */
+
+
+/* 4th landing slide */
+
+.fourth-slide {
+    background-image: url(../img/4th-slide.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: #fff;
+    height: 100vh;
+}
+
+.fourth-slide-text-1 {
+    padding-top: 4vh !important;
+    /* font-size: 110px; */
+    font-size: 11vh;
+
+}
+
+.fourth-slide-text-2 {
+    padding-top: 3vh !important;
+    /* font-size: 90px; */
+    font-size: 9vh;
+
+}
+.fourth-slide-text-3 {
+    color: #9A9A9A;
+    padding-top: 10vh !important;
+    /* font-size: 90px; */
+    font-size: 9vh;
+
+}
+
+.fourth-slide-skyline {
+    padding-top: 9vh;
+    max-width: 50vh;
+    opacity: 0.5;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: 0.4s;
+}
+
+.fourth-slide-skyline:hover {
+    padding-top: 9vh;
+    max-width: 55vh;
+    opacity: 0.8;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+/* 4th landing slide */
+
+
+/* settings page */
+.settings-main {
+    /* margin-top: 100px; */
+    background-color: rgb(245, 245, 245);
+}
+.filters-block {
+    margin-top: 7vh;
+    padding-top: 4vh;
+}
+.filters {
+    height: 13vh;
+    border-radius: 30px;
+    background-color: #212529;
+}
+
+.filters .filter-item {
+    height: 7vh;
+    background-color: #fff;
+    border-radius: 30px;
+}
+.filters .filters-input {
+    border-radius: 20px;
+    padding-left: 10px;
+}
+.filters .text {
+    font-size: 20px;
+    /* border-bottom: 1px solid #000000; */
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+.filters .icon {
+    
+    font-size: 10px;
+}
+.filters-option {
+    width: 100% !important;
+}
+
+
+.cards-block{
+    max-width: 35vh;
+}
+.card-body .card-text {
+    height: 8vh !important;
+    width: 90%;
+    overflow: hidden;
+}
+
+.car-class {
+    border: 1px solid #000000 !important;
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    width: 5vh;
+}
+
+.car-name {
+    border: 1px solid #000000 !important;
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    width:70%;
+    height: 4.5vh;
+    overflow: hidden;
+}
+.car-card {
+    max-width: 35vh;
+    max-height: 40vh;
+    height: 40vh;
+    -webkit-box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.btn-car-info {
+    font-size: 20px;
+}
+.btn-car-info:hover {
+    /* background-color: #cecece !important; */
+    border: 1px solid #000000 !important;
+    font-size: 20px;
+}
+/* settings page */
+
+
+
+/* car class selector */
+.car-class-selector {
+    border: 2px solid #000000;
+    border-radius: 20px;
+}
+
+.car-class-selector:focus {
+    border: 2px solid #000000 !important;
+    box-shadow: none;
+}
+/* car class selector */
+
+
+/* sorted by selector */
+.sorted-by-selector {
+    border: 2px solid #000000;
+    border-radius: 20px;
+}
+
+.sorted-by-selector:focus {
+    border: 2px solid #000000 !important;
+    box-shadow: none;
+}
+/* sorted by selector */
+
+
+/* designs page */
+
+.design-car-card {
+    max-width: 35vh;
+    max-height: 40vh;
+    height: 40vh;
+    -webkit-box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.design-car-card .car-img {
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+}
+
+.design-car-card .design-name {
+
+    margin-top: 80%;
+    max-height: 5vh;
+    height: 5vh;
+    overflow: hidden;
+}
+/* designs page */
+
+
+/* car-park page */
+.brand-group-name {
+    /* background-color: #fff; */
+    border-bottom: 1px solid #000000;
+}
+
+.brand-group-name .text {
+    font-family: 'Montserrat', serif;
+    font-size: 40px;
+}
+/* car-park page */
+
+
+/* footer */
+
+
+/* footer */

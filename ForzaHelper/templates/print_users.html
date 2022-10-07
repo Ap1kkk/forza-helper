@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block body%}
+<h2 style="margin-top: 10vh">Все пользователи</h2>
+
+<div class="table-responsive">
+    <table class="table table-warning table-hover table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Login</th>
+          <th scope="col">Password</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for el in users %}
+        <tr class="">
+          <td>{{ el.id }}</td>
+          <td>{{ el.login }}</td>
+          <td>{{ el.password }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

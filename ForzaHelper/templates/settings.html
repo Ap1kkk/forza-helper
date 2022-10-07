@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Forza Helper
+{% endblock %}
+
+{% block body%}
+
+
+<div class="container-fluid settings-main">
+    <div class="container settings-pole">
+
+        <div class="col-12 filters-block">
+            <div class="row filters d-flex align-items-center justify-content-between">
+                
+                    <div class="col-3 mx-auto d-flex  align-items-center justify-content-center filter-item">
+                        <input class="filters-input w-100" type="text" name="" id="brand-search" list="brands" placeholder="Brand">
+                        <datalist class="filters-option" id="brands">
+                            {% for brand in brand_values %}
+                                <option class="filters-option" value="{{brand.lower()}}"></option>
+                            {% endfor %}
+                        </datalist>
+                    </div>
+                    <div class="col-3 mx-auto d-flex flex-column align-items-center justify-content-center filter-item">
+                        <input class="filters-input w-100" type="text" name="" id="model-search" list="models" placeholder="Model">
+                        <!-- <input class="w-100 form-control" type="text" name="car-model" id="car-model" list="models" placeholder="Model"> -->
+                        <datalist class="filters-option" id="models">
+                            {% for model in model_values %}
+                                <option class="filters-option" value="{{model.lower()}}"></option>
+                            {% endfor %}
+                        </datalist>
+                    </div>
+                    <div class="col-1 mx-auto d-flex flex-column align-items-center justify-content-center filter-item">
+                        <select class="form-select car-class-selector" id="class-selector">
+                            <option selected>Class</option>
+                            <option value="X">X</option>
+                            <option value="S1">S1</option>
+                            <option value="S2">S2</option>
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                            <option value="D">D</option>
+                        </select>
+                    </div>
+                    <div class="col-2 mx-auto d-flex flex-column align-items-center justify-content-center filter-item">
+                        <input class="filters-input w-100" type="text" name="" id="" list="types" placeholder="Type">
+                        <datalist class="filters-option" id="types">
+                            <option class="filters-option" value="tesla"></option>
+                            <option class="filters-option" value="mclaren"></option>
+                            <option class="filters-option" value="audi"></option>
+                        </datalist>
+                    </div>
+                    <div class="col-2 mx-auto d-flex flex-column align-items-center justify-content-center filter-item">
+                        <select class="form-select sorted-by-selector">
+                            <option selected>Сортировать по</option>
+                            <option value="X">Наиболее популярное</option>
+                            <option value="S1">Возрастанию класса</option>
+                            <option value="S2">Убыванию класса</option>
+                            <option value="A">Наименее популярное</option>
+                          </select>
+                    </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            {% for el in car_settings_cards %}
+            <div class="{{el.brand}} / {{el.model}} | {{el.car_class}} cards-block mt-4 mx-auto  " id="{{el.setting_id}}">
+                <div class="card car-card ">
+                    <div class="card-title d-flex justify-content-around align-items-center mt-2">
+                        <h5 class="car-class d-flex align-items-center justify-content-center h-75">{{el.car_class.upper()}}</h5>
+                        <h5 class="car-name d-flex align-items-center justify-content-center text-center p-1 h-100">{{el.brand.upper()}} {{el.model}}</h5>
+                    </div>
+
+                    <img src="../static/img/car_png_img/{{el.car_name}}.png" class="card-img-top w-100" alt="...">
+                    <div class="card-body">
+                        <div class="card-title d-flex justify-content-around mt-2">
+                            <h5 class="d-flex align-items-center justify-content-center">{{el.setting_name}}</h5>
+                        </div>
+                        <p class="card-text text">{{el.setting_description}}</p>
+                        <a href="#" class="btn btn-car-info position-absolute bottom-0 end-0" type="button">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<script type="module" src="{{ url_for('static', filename='js/settings_search.js') }}"></script>   
+{% endblock %}
