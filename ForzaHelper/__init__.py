@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
-
+# from waitress import serve
 
 app = Flask(__name__)
 app.secret_key = 'some secret salt'
@@ -14,4 +14,5 @@ from ForzaHelper import models, routes
 
 db.create_all()
 # app.run(debug=True)
-app.run(debug=False, host='0.0.0.0', port=80)
+# app.run(debug=False, host='0.0.0.0', port=80)
+# serve(app, port=8080)
