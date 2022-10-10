@@ -13,6 +13,6 @@ login_manager = LoginManager(app)
 from ForzaHelper import models, routes
 
 db.create_all()
-# app.run(debug=True)
+app.run(debug=True)
 # app.run(debug=False, host='0.0.0.0', port=80)
 # serve(app, port=8080)

@@ -40,8 +40,14 @@
                       <input type="checkbox" class="form-check-input" id="exampleCheck1">
                       <label class="form-check-label" for="exampleCheck1">Check me out</label>
                     </div> -->
-                    <input type="submit" class="btn btn-success " value="Login">
-                    <a class="btn btn-outline-primary" href="{{ url_for('register') }}">Register</a>
+                    <div class="buttons d-flex justify-content-between">
+                        <div>
+                            <input type="submit" class="btn btn-success " value="Login">
+                            <a class="btn btn-outline-dark" href="{{ url_for('register') }}">Register</a>
+                        </div>
+                        <a  class="btn btn-primary" role="button" href="/">Back home</a>
+                    </div>
+
                 </form>
             </div>
             

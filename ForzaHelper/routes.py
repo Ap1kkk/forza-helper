@@ -87,6 +87,7 @@ def add_car_setting():
 
     brand_values = JsonFiles.brand_list
     model_values = JsonFiles.model_list
+    brand_and_model_lower = JsonFiles.brands_and_models_lower
 
     if request.method == "POST":
         setting_name = request.form.get('setting-name')
@@ -96,8 +97,10 @@ def add_car_setting():
         setting_id = request.form.get('setting-id')
         setting_description = request.form.get('setting-description')
         user_id = current_user.id
-
-        car_name = JsonFiles.get_name_by_model(model)
+        try:
+            car_name = JsonFiles.get_name_by_model(model)
+        except Exception:
+            flash('This brand doesn\'t contains this model')
 
         if request.method == 'POST':
             if not (setting_name and car_class and brand and model and setting_id):
@@ -106,6 +109,8 @@ def add_car_setting():
                 flash('You wrongly typed the brand of the car\nPlease retype it again')
             elif model not in model_values:
                 flash('You wrongly typed the model of the car\nPlease retype it again')
+            elif model not in brand_and_model_lower[brand]:
+                flash('This brand doesn\'t contains this model')
             elif car_class == 'Class':
                 flash('You didn\'t choose the class of the car')
             else:
